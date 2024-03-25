@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { COLORS } from '../../constants';
+import { COLORS } from "../../constants";
 
-import SearchInput from '../SearchInput';
-import UnstyledButton from '../UnstyledButton';
-import Icon from '../Icon';
+import SearchInput from "../SearchInput";
+import UnstyledButton from "../UnstyledButton";
+import Icon from "../Icon";
 
 const SuperHeader = () => {
   return (
@@ -13,6 +13,7 @@ const SuperHeader = () => {
       <MarketingMessage>
         Free shipping on domestic orders over $75!
       </MarketingMessage>
+      <Spacer />
       <SearchInput />
       <HelpLink href="/help">Help</HelpLink>
       <UnstyledButton>
@@ -23,9 +24,22 @@ const SuperHeader = () => {
 };
 
 const Wrapper = styled.div`
-  font-size: 0.875rem;
+  font-size: (14/16) rem;
   color: ${COLORS.gray[300]};
   background-color: ${COLORS.gray[900]};
+  display: flex;
+  padding-left: 32px;
+  padding-right: 32px;
+  height: 40px;
+  align-items: center;
+  gap: 24px;
+`;
+
+const Spacer = styled.div`
+  width: 0px;
+  height: 0px;
+  flex-basis: 0;
+  margin: auto;
 `;
 
 const MarketingMessage = styled.span`
